@@ -51,7 +51,7 @@ OPC UA Subscribe connects to OPC UA Server and listens for incoming data message
 
 
 
-##Ouput send to next module looks like this
+## Output sent to next module looks like this
 
 ```js
   {
