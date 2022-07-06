@@ -48,12 +48,6 @@ environments:
       - true
       - false
     name: Discard oldest
-  - key:  INITIAL_DELAY
-    description: Initial delay
-    value: ''
-    default: 1000
-    type: integer
-    name: Initial delay
   - key:  MAX_RETRY
     description: Max retry for connecting
     value: ''

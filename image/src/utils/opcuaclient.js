@@ -11,7 +11,6 @@ const {
 
 const fetch = require('node-fetch')
 const {
-  INITIAL_DELAY,
   MAX_RETRY,
   REQUESTED_PUBLISHING_INTERVAL,
   REQUESTED_LIFETIME_COUNT,
@@ -34,7 +33,6 @@ const {
 const { isValidURL } = require('./util')
 
 const connectionStrategy = {
-  initialDelay: INITIAL_DELAY,
   maxRetry: MAX_RETRY,
 }
 

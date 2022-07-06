@@ -24,7 +24,6 @@ OPC UA Subscribe connects to OPC UA Server and listens for incoming data message
 | Environment Variables | type | Description |
 | --- | --- | --- |
 | OPC_UA_SERVER | string | OPC UA Server endpoint |
-| INITIAL_DELAY | integer | Initial delay for connection |
 | MAX_RETRY | integer | Max retry for connection |
 | REQUESTED_PUBLISHING_INTERVAL | integer | Subscription parameter requestedPublishingInterval |
 | REQUESTED_LIFETIME_COUNT | integer | Subscription parameter requestedLifetimeCount |
