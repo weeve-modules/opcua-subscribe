@@ -49,6 +49,18 @@ OPC UA Subscribe connects to OPC UA Server and listens for incoming data message
 | INGRESS_HOST          | string | Host where app is running |
 | INGRESS_PORT          | string | Port where app is running |
 
+
+
+##Ouput send to next module looks like this
+
+```js
+  {
+    timestamp: <timestamp value>,
+    value: <value of the variable>,
+    name: <name of the variable>,
+  }
+```
+
 ## Dependencies
 
 ```js
