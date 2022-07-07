@@ -1,5 +1,5 @@
 version: 1.0.0
-name: OPCUA Subscribe
+name: OPC UA Subscribe
 description: OPC UA Subscribe connects to OPC UA Server and listens for incoming data messages and forwards the payload to next module.
 icon: https://icons-020-demo.s3.eu-central-1.amazonaws.com/mi_OPCUA_input.png
 type: process
@@ -8,7 +8,7 @@ tags:
   - process
 categories:
   - id: category
-    name: Process
+    name: Policy
 image:
   name: weevenetwork/opcua-subscribe
   tag: latest
@@ -83,7 +83,7 @@ environments:
     value: ''
     default: 100
     type: integer
-    name: max notifications per publish
+    name: Max notifications per publish
   - key:  PRIORITY
     description: priority parameter
     value: ''
