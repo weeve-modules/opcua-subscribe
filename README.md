@@ -35,7 +35,6 @@ OPC UA Subscribe connects to OPC UA Server and listens for incoming data message
 | SAMPLING_INTERVAL | integer | MonitoringParametersOptions parameter samplingInterval |
 | QUEUE_SIZE | integer | MonitoringParametersOptions parameter queueSize |
 | DISCARD_OLDEST | boolean | true/false to discard oldest, MonitoringParametersOptions parameter discardOldest |
-| REQUIRES_AUTHENTICATION | string | Yes/No if connection needs authentication |
 | OPC_UA_USERNAME | string | Username if authentication is required |
 | OPC_UA_PASSWORD | string | Password if authentication is required |
 
@@ -48,8 +47,6 @@ OPC UA Subscribe connects to OPC UA Server and listens for incoming data message
 | MODULE_NAME           | string | Name of the module        |
 | INGRESS_HOST          | string | Host where app is running |
 | INGRESS_PORT          | string | Port where app is running |
-
-
 
 ## Output sent to next module looks like this
 
