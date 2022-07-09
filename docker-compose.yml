@@ -5,8 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      MODULE_NAME: opcua-subscribe
-      MODULE_TYPE: PROCESS
+      MODULE_NAME: OPC UA Subscribe
+      MODULE_TYPE: INGRESS
       INGRESS_HOST: 127.0.0.1
       INGRESS_PORT: 80      
       EGRESS_URL: http://localhost:8082

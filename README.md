@@ -1,4 +1,4 @@
-# OPCUASubscribe
+# OPC UA Subscribe
 
 |                |                                                                                       |
 | -------------- | ------------------------------------------------------------------------------------- |
@@ -7,7 +7,7 @@
 | Dockerhub Link | [weevenetwork/opcua-subscribe](https://hub.docker.com/r/weevenetwork/opcua-subscribe) |
 | Authors        | Mesud Pasic                                                                           |
 
-- [OPCUASubscribe](#OPCUASubscribe)
+- [OPC UA Subscribe](#OPCUASubscribe)
   - [Description](#description)
   - [Features](#features)
   - [Environment Variables](#environment-variables)
