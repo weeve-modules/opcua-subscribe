@@ -22,14 +22,12 @@ const {
   SAMPLING_INTERVAL,
   QUEUE_SIZE,
   DISCARD_OLDEST,
-  EGRESS_URL,
+  EGRESS_URLS,
   MODULE_NAME,
   OPC_UA_SERVER,
   OPC_UA_USERNAME,
   OPC_UA_PASSWORD,
 } = require('../config/config')
-
-const { isValidURL } = require('./util')
 
 const connectionStrategy = {
   maxRetry: MAX_RETRY,
@@ -110,8 +108,8 @@ const monitorVariable = async (subscription, item) => {
 }
 
 const send = async (name, value) => {
-  if (isValidURL(EGRESS_URL)) {
-    await fetch(EGRESS_URL, {
+  if (EGRESS_URLS) {
+    await fetch(EGRESS_URLS, {
       method: 'POST',
       body: JSON.stringify({
         timestamp: Date.now(),
