@@ -81,14 +81,14 @@ const opcuaSubscribe = async () => {
     for (let i = 0; i < vars.length; i++) {
       if (vars[i] !== '') monitorVariable(subscription, vars[i])
     }
-    //await session.close()
+    // await session.close()
   } catch (e) {
     console.log(`Failed to create session with OPC UA server ${OPC_UA_SERVER}, error:  ${e}`)
   }
 }
-/*const timeout = async ms => {
+/* const timeout = async ms => {
   return new Promise(resolve => setTimeout(resolve, ms))
-}*/
+} */
 
 const monitorVariable = async (subscription, item) => {
   // install monitored item
