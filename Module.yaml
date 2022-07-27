@@ -4,7 +4,7 @@ description: 'OPC UA Subscribe connects to OPC UA Server and listens for incomin
 versionName: 'v1.0.0'                    # Module version name that will be used to reference the module version, and uniquely identify the module version with a common name.
 isPublic: true                          # Boolean value that indicates if the module is Public or Private.
 categories:                             # Array of category that will be used to group the module in the UI.
-  - 'OPC UA'
+  - 'Ingress'
 type: 'Input'      # Module type (Input, Processing, Output) that will be used to group the module in the UI.
 image:
   name: 'weevenetwork/opcua-subscribe'     # Image name from the docker registry.
