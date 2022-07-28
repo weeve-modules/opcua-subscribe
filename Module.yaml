@@ -4,7 +4,7 @@ description: 'OPC UA Subscribe connects to OPC UA Server and listens for incomin
 versionName: 'v1.0.0'                    # Module version name that will be used to reference the module version, and uniquely identify the module version with a common name.
 isPublic: true                          # Boolean value that indicates if the module is Public or Private.
 categories:                             # Array of category that will be used to group the module in the UI.
-  - 'OPC UA'
+  - 'Ingress'
 type: 'Input'      # Module type (Input, Processing, Output) that will be used to group the module in the UI.
 image:
   name: 'weevenetwork/opcua-subscribe'     # Image name from the docker registry.
@@ -15,17 +15,17 @@ envs:                                   # Array of environment variables that wi
   - name: OPC UA Server
     key:  OPC_UA_SERVER
     description: URL of OPC UA Server
-    value: ''    
+    value: ''
     type: 'text'
   - name: OPC UA Username
     key:  OPC_UA_USERNAME
     description: Username for authentication
-    value: ''    
+    value: ''
     type: 'text'
   - name: OPC UA Password
     key:  OPC_UA_PASSWORD
     description: Password for authentication
-    value: ''    
+    value: ''
     type: 'text'
   - name: Discard oldest
     key:  DISCARD_OLDEST
@@ -39,32 +39,32 @@ envs:                                   # Array of environment variables that wi
     key:  MAX_RETRY
     description: Max retry for connecting
     value: '1'
-    type: integer
+    type: 'number'
   - name: Requested publishing interval
     key:  REQUESTED_PUBLISHING_INTERVAL
     description: requestedPublishingInterval parameter
     value: '1000'
-    type: integer
+    type: 'number'
   - name: Requested life time count
     key:  REQUESTED_LIFETIME_COUNT
     description: requestedLifetimeCount parameter
     value: '100'
-    type: integer
+    type: 'number'
   - name: Requested max keep alive count
     key:  REQUESTED_MAX_KEEPALIVE_COUNT
     description: requestedMaxKeepAliveCount parameter
     value: '10'
-    type: integer
+    type: 'number'
   - name: Max notifications per publish
     key:  MAX_NOTIFICATIONS_PER_PUBLISH
     description: maxNotificationsPerPublish parameter
     value: '100'
-    type: integer
+    type: 'number'
   - name: Priority
     key:  PRIORITY
     description: priority parameter
     value: '10'
-    type: integer
+    type: 'number'
   - name: Node ID
     key:  NODE_ID
     description: Node ID to connect to
@@ -79,12 +79,12 @@ envs:                                   # Array of environment variables that wi
     key:  SAMPLING_INTERVAL
     description: parameter samplingInterval
     value: '100'
-    type: integer
+    type: 'number'
   - name: Queue size
     key:  QUEUE_SIZE
     description: parameter queueSize
     value: '10'
-    type: integer   
+    type: 'number'
 ports:                                  # Array of ports that will be exposed by the module.
   - container: 8080                     # Port number from the container.
     host: 8080                          # Port number to map on the host.
