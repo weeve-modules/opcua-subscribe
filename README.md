@@ -4,7 +4,7 @@
 | -------------- | ------------------------------------------------------------------------------------- |
 | Name           | OPC UA Subscribe                                                                      |
 | Version        | v1.0.0                                                                                |
-| Dockerhub Link | [weevenetwork/opcua-subscribe](https://hub.docker.com/r/weevenetwork/opcua-subscribe) |
+| DockerHub | [weevenetwork/opcua-subscribe](https://hub.docker.com/r/weevenetwork/opcua-subscribe) |
 | Authors        | Mesud Pasic                                                                           |
 
 - [OPC UA Subscribe](#OPCUASubscribe)
@@ -45,8 +45,11 @@ OPC UA Subscribe connects to OPC UA Server and listens for incoming data message
 | Environment Variables | type   | Description               |
 | --------------------- | ------ | ------------------------- |
 | MODULE_NAME           | string | Name of the module        |
+| MODULE_TYPE           | string | Type of the module (Input, Processing, Output)    |
 | INGRESS_HOST          | string | Host where app is running |
 | INGRESS_PORT          | string | Port where app is running |
+| EGRESS_URLS           | string | HTTP ReST endpoint for the next module            |
+
 
 ## Output sent to next module looks like this
 
