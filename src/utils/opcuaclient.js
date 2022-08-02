@@ -133,6 +133,8 @@ const send = async (name, value) => {
         }
       }
     })
+  } else {
+    console.error('EGRESS_URLS is not provided.')
   }
 }
 
