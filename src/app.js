@@ -30,14 +30,6 @@ app.use(
     }, // optional: allows to skip some log messages based on request and/or response
   })
 )
-// main post listener
-app.post('/', async (req, res) => {
-  opcuaSubscribe()
-  return res.status(200).json({
-    status: true,
-    message: `OPC UA Subscribe is called for listening`,
-  })
-})
 
 // handle exceptions
 app.use(async (err, req, res, next) => {
@@ -54,5 +46,6 @@ app.use(async (err, req, res, next) => {
 if (require.main === module) {
   app.listen(INGRESS_PORT, INGRESS_HOST, () => {
     console.log(`${MODULE_NAME} listening on ${INGRESS_PORT}`)
+    opcuaSubscribe()
   })
 }
