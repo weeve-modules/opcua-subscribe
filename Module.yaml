@@ -39,48 +39,48 @@ envs:                                   # Array of environment variables that wi
     value: 'true'
     type: 'select'
     options:
-      - true
-      - false
+      - 'true'
+      - 'false'
     dependencies: []
   - name: Max retry
     key:  MAX_RETRY
     description: Max retry for connecting
-    value: '1'
+    value: 1
     type: 'number'
     options: []
     dependencies: []
   - name: Requested publishing interval
     key:  REQUESTED_PUBLISHING_INTERVAL
     description: requestedPublishingInterval parameter
-    value: '1000'
+    value: 1000
     type: 'number'
     options: []
     dependencies: []
   - name: Requested life time count
     key:  REQUESTED_LIFETIME_COUNT
     description: requestedLifetimeCount parameter
-    value: '100'
+    value: 100
     type: 'number'
     options: []
     dependencies: []
   - name: Requested max keep alive count
     key:  REQUESTED_MAX_KEEPALIVE_COUNT
     description: requestedMaxKeepAliveCount parameter
-    value: '10'
+    value: 10
     type: 'number'
     options: []
     dependencies: []
   - name: Max notifications per publish
     key:  MAX_NOTIFICATIONS_PER_PUBLISH
     description: maxNotificationsPerPublish parameter
-    value: '100'
+    value: 100
     type: 'number'
     options: []
     dependencies: []
   - name: Priority
     key:  PRIORITY
     description: priority parameter
-    value: '10'
+    value: 10
     type: 'number'
     options: []
     dependencies: []
@@ -112,10 +112,15 @@ envs:                                   # Array of environment variables that wi
     type: 'number'
     options: []
     dependencies: []
+ports: []
+envPorts: []
 mounts: []
+envMounts: []
+devices: []
+envDevices: []
 tags:                                   # Array of tags.
   - 'NodeJS'
   - 'Input'
-  - 'OPC UA'
-  - 'Boilerplate 1.0.0'
+  - 'OPC-UA'
+  - '1.0.0'
 icon: 'https://icons-020-demo.s3.eu-central-1.amazonaws.com/mi_OPCUA_input.png'    # Icon URL that will be displayed in the UI.
