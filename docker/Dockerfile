@@ -6,6 +6,7 @@ COPY ./package.json /app/
 WORKDIR /app
 RUN set NODE_OPTIONS=--max-old-space-size=30720
 RUN npm install
+RUN apt update && apt install -y openssl && apt clean
 SHELL ["/bin/bash", "-c"]
 COPY ./src /app/src
 RUN ["chmod", "+x", "/app/docker-entrypoint.sh"]

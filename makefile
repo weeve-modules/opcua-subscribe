@@ -43,6 +43,14 @@ push_latest:
 	docker image push ${MODULE}:${VERSION_NAME}
 .phony: push_latest
 
+run_test:
+	docker-compose -f test/docker-compose.test.yml up
+.phony: run_test
+
+stop_test:
+	docker-compose -f test/docker-compose.test.yml down
+.phony: stop_test
+
 create_and_push_multi_platform:
 	docker buildx build --platform linux/amd64,linux/arm,linux/arm64 -t ${MODULE}:${VERSION_NAME} --push . -f docker/Dockerfile
 .phony: create_and_push_multi_platform
