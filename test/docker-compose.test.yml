@@ -1,0 +1,28 @@
+version: "3.0"
+networks:
+  default:
+    name: docker-test-networ
+services:
+
+  opcua_subscribe_test:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    container_name: opcua_subscribe_test_container
+    ports:
+      - 80:80
+    volumes:
+    - /dev/urandom:/mnt/random
+    env_file:
+      - test.env
+
+
+  echo:
+    image: jmalloc/echo-server
+    environment:
+      LOG_HTTP_BODY: "true"
+      LOG_HTTP_HEADERS: "true"
+      PORT: "9000"
+    ports:
+      - 9000:9000
+    container_name: echo

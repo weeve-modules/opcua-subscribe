@@ -21,15 +21,29 @@ envs:                                   # Array of environment variables that wi
     dependencies: []
   - name: OPC UA Username
     key:  OPC_UA_USERNAME
-    description: Username for authentication
+    description: Username for authentication, leave empty for no authentication
     value: ''
     type: 'text'
     options: []
     dependencies: []
   - name: OPC UA Password
     key:  OPC_UA_PASSWORD
-    description: Password for authentication
+    description: Password for authentication, leave empty for no authentication
     value: ''
+    type: 'text'
+    options: []
+    dependencies: []
+  - name: Node ID
+    key:  NODE_ID
+    description: Node ID to connect to
+    value: '3'
+    type: 'text'
+    options: []
+    dependencies: []
+  - name: Variable list
+    key:  VARIABLE_LIST
+    description: Comma separated list of variables to read
+    value: 'AirConditioner_1,AirConditioner_1.Humidity'
     type: 'text'
     options: []
     dependencies: []
@@ -82,20 +96,6 @@ envs:                                   # Array of environment variables that wi
     description: priority parameter
     value: 10
     type: 'number'
-    options: []
-    dependencies: []
-  - name: Node ID
-    key:  NODE_ID
-    description: Node ID to connect to
-    value: ''
-    type: 'text'
-    options: []
-    dependencies: []
-  - name: Variable list
-    key:  VARIABLE_LIST
-    description: Comma separated list of variables to read
-    value: ''
-    type: 'text'
     options: []
     dependencies: []
   - name: Sampling interval
