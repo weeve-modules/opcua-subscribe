@@ -46,8 +46,6 @@ OPC UA Subscribe connects to OPC UA Server and listens for incoming data message
 | --------------------- | ------ | ---------------------------------------------- |
 | MODULE_NAME           | string | Name of the module                             |
 | MODULE_TYPE           | string | Type of the module (Input, Processing, Output) |
-| INGRESS_HOST          | string | Host where app is running                      |
-| INGRESS_PORT          | string | Port where app is running                      |
 | EGRESS_URLS           | string | HTTP ReST endpoint for the next module         |
 
 ## Output sent to next module looks like this

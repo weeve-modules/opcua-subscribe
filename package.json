@@ -32,8 +32,6 @@
     "prettier": "^2.3.0"
   },
   "dependencies": {
-    "express": "^4.17.3",
-    "express-winston": "^4.2.0",
     "node-fetch": "^2.6.1",
     "node-opcua": "^2.71.0"
   }
