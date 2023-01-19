@@ -1,10 +1,10 @@
 version: "3.0"
 networks:
   default:
-    name: dev_random_network
+    name: docker-test-networ
 services:
 
-  dev_random:
+  opcua_subscribe_test:
     build:
       context: ../
       dockerfile: docker/Dockerfile

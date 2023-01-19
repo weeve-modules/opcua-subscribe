@@ -90,10 +90,12 @@ const opcuaSubscribe = async () => {
   return new Promise(resolve => setTimeout(resolve, ms))
 } */
 
-const monitorVariable = async (subscription, item) => {
+const monitorVariable = async (subscription, variableName) => {
   // install monitored item
+  console.log(`Monitoring ns=${NODE_ID};s=${variableName}`)
+
   const itemToMonitor = {
-    nodeId: `ns=${NODE_ID};s=${item}`,
+    nodeId: `ns=${NODE_ID};s=${variableName}`,
     attributeId: AttributeIds.Value,
   }
   const parameters = {
@@ -103,7 +105,7 @@ const monitorVariable = async (subscription, item) => {
   }
   const monitoredItem = ClientMonitoredItem.create(subscription, itemToMonitor, parameters, TimestampsToReturn.Both)
   monitoredItem.on('changed', async dataValue => {
-    await send(item, dataValue)
+    await send(variableName, dataValue)
   })
 }
 
